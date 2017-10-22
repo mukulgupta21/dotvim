@@ -22,5 +22,11 @@ set shiftwidth=2    " Indents will have a width of 2
 set number          " Line numbers
 set autoindent      " Automatic indentation
 
+if has("autocmd")
+  " If the filetype is Makefile then we need to use tabs
+  " So do not expand tabs into space.
+  autocmd FileType make   set noexpandtab
+endif
+
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
