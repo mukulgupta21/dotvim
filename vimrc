@@ -30,3 +30,8 @@ endif
 
 highlight ExtraWhitespace ctermbg=red guibg=red
 match ExtraWhitespace /\s\+$/
+
+" SQLUtilities
+" vmap <leader>sf formats SQL in visual mode
+" nmap <leader>sfs formats SQL in normal mode
+" vmap <leader>sfr formats multiplel SQL statements
