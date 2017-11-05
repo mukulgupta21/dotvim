@@ -35,3 +35,18 @@ match ExtraWhitespace /\s\+$/
 " vmap <leader>sf formats SQL in visual mode
 " nmap <leader>sfs formats SQL in normal mode
 " vmap <leader>sfr formats multiplel SQL statements
+
+" Read from .vimlocal in current directory for project specific vim config.
+silent! so .vimlocal
+
+" CtrlSF Plugin key mappings for sublime text like searches
+" Depends on ack. So it needs to be installed.
+" Useful for recursive search
+nmap     <C-F>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordPath
+vmap     <C-F>F <Plug>CtrlSFVwordExec
+nmap     <C-F>n <Plug>CtrlSFCwordPath
+nmap     <C-F>p <Plug>CtrlSFPwordPath
+nnoremap <C-F>o :CtrlSFOpen<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>

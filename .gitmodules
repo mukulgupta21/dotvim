@@ -10,3 +10,6 @@
 [submodule "bundle/Align"]
 	path = bundle/Align
 	url = git@github.com:vim-scripts/Align.git
+[submodule "bundle/ctrlsf.vim"]
+	path = bundle/ctrlsf.vim
+	url = git@github.com:dyng/ctrlsf.vim.git
