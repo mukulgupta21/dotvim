@@ -6,6 +6,14 @@ Install it using:
 ```
 sudo apt-get install ack
 ```
+
+### Debian
+Debian already has an existing `ack`. So, need to install ack-grep and rename to ack
+```
+sudo apt-get install ack-grep
+dpkg-divert --package ack-grep --local --remove --rename --divert /usr/bin/ack /usr/bin/ack-grep
+```
+
 ## Installation
 ```
 cd ~

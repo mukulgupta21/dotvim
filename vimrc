@@ -21,6 +21,7 @@ set expandtab       " Expand TABs to spaces
 set shiftwidth=2    " Indents will have a width of 2
 set number          " Line numbers
 set autoindent      " Automatic indentation
+syntax on           " Enable syntax highlighting
 
 if has("autocmd")
   " If the filetype is Makefile then we need to use tabs
