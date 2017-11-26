@@ -23,10 +23,21 @@ set number          " Line numbers
 set autoindent      " Automatic indentation
 syntax on           " Enable syntax highlighting
 
+set scrolloff=5     " Always keep an offset of a few lines when scrolling
+set hlsearch        " Highling searched word
+set incsearch       " Move the cursor to the match while still typing
+set showcmd         " Display incomplete commands
+
 if has("autocmd")
   " If the filetype is Makefile then we need to use tabs
   " So do not expand tabs into space.
   autocmd FileType make   set noexpandtab
+  " If the extension is *.md, or *.markdown, explcitly set markdown as
+  " filetype
+  autocmd BufRead,BufNewFile *.md,*.markdown set ft=markdown
+  " vim-surround specific
+  " Use `Sc` in visual mode to use code formatting in markdown
+  silent! autocmd BufRead,BufNewFile *.md,*.markdown let g:surround_{char2nr("c")} = "```\r```"
 endif
 
 highlight ExtraWhitespace ctermbg=red guibg=red
