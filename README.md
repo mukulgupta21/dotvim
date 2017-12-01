@@ -21,5 +21,13 @@ git clone git@github.com:mukulgupta21/dotvim.git .vim
 ln -s ~/.vim/vimrc ~/.vimrc
 cd ~/.vim
 git submodule init
-git submodule update
+git submodule update --recursive
+```
+
+### C++ autocompletion
+
+```
+apt-get install cmake
+cd bundle/YouCompleteMe
+./install.sh --clang-completer
 ```
