@@ -1,5 +1,3 @@
-colorscheme evening
-
 " Pathogen - plugin management
 call pathogen#infect()
 
@@ -21,12 +19,15 @@ set expandtab       " Expand TABs to spaces
 set shiftwidth=2    " Indents will have a width of 2
 set number          " Line numbers
 set autoindent      " Automatic indentation
-syntax on           " Enable syntax highlighting
 
 set scrolloff=5     " Always keep an offset of a few lines when scrolling
 set hlsearch        " Highling searched word
 set incsearch       " Move the cursor to the match while still typing
 set showcmd         " Display incomplete commands
+set mouse=a         " Add mouse support
+syntax enable       " Enable syntax highlighting
+set background=dark
+colorscheme solarized
 
 if has("autocmd")
   " If the filetype is Makefile then we need to use tabs
