@@ -31,3 +31,10 @@ apt-get install cmake
 cd bundle/YouCompleteMe
 ./install.sh --clang-completer
 ```
+
+## Updating .vim
+
+```
+git pull
+git submodule update --init --recursive
+```
